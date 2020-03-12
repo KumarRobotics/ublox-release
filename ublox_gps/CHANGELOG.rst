@@ -2,10 +2,15 @@
 Changelog for package ublox_gps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.3.1 (2020-03-12)
+------------------
+* Fix unit in covariance calculation
+* Contributors: Ferry Schoenmakers
+
 1.3.0 (2020-01-10)
 ------------------
 * Fix heading output to comply with REP-103
-  When not reporting valid heading, overwrite covariance with big number (0 otherwise) and fix heading accuracy unit in comments
+  When not reporting valid heading, overwrite covariance with big number (0 otherwise)
 * CfgNAV5: add dynamic model bike
 * Contributors: Ferry Schoenmakers, Raphael Riebl
 
