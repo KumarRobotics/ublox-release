@@ -34,6 +34,9 @@ namespace ublox_gps {
 
 using namespace ublox_msgs;
 
+//! Sleep time [ms] after setting the baudrate
+constexpr static int kSetBaudrateSleepMs = 500;
+
 const boost::posix_time::time_duration Gps::default_timeout_ =
     boost::posix_time::milliseconds(
         static_cast<int>(Gps::kDefaultAckTimeout * 1000));
@@ -499,11 +502,13 @@ bool Gps::setDeadReckonLimit(uint8_t limit) {
   return configure(msg);
 }
 
-bool Gps::setPpp(bool enable) {
+bool Gps::setPpp(bool enable, float protocol_version) {
   ROS_DEBUG("%s PPP", (enable ? "Enabling" : "Disabling"));
 
   ublox_msgs::CfgNAVX5 msg;
   msg.usePPP = enable;
+  if(protocol_version >= 18)
+    msg.version = 2;
   msg.mask1 = ublox_msgs::CfgNAVX5::MASK1_PPP;
   return configure(msg);
 }
@@ -515,11 +520,14 @@ bool Gps::setDgnss(uint8_t mode) {
   return configure(cfg);
 }
 
-bool Gps::setUseAdr(bool enable) {
+bool Gps::setUseAdr(bool enable, float protocol_version) {
   ROS_DEBUG("%s ADR/UDR", (enable ? "Enabling" : "Disabling"));
 
   ublox_msgs::CfgNAVX5 msg;
   msg.useAdr = enable;
+  
+  if(protocol_version >= 18)
+    msg.version = 2;
   msg.mask2 = ublox_msgs::CfgNAVX5::MASK2_ADR;
   return configure(msg);
 }
