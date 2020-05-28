@@ -487,8 +487,6 @@ typedef boost::shared_ptr<ComponentInterface> ComponentPtr;
  */
 class UbloxNode : public virtual ComponentInterface {
  public:
-  //! How long to wait during I/O reset [s]
-  constexpr static int kResetWait = 10;
   //! how often (in seconds) to call poll messages
   constexpr static double kPollDuration = 1.0;
   // Constants used for diagnostic frequency updater
@@ -1059,6 +1057,8 @@ class RawDataProduct: public virtual ComponentInterface {
  */
 class AdrUdrProduct: public virtual ComponentInterface {
  public:
+  AdrUdrProduct(float protocol_version);
+  
   /**
    * @brief Get the ADR/UDR parameters.
    *
@@ -1092,7 +1092,8 @@ class AdrUdrProduct: public virtual ComponentInterface {
 
  protected:
   //! Whether or not to enable dead reckoning
-  bool use_adr_;
+  bool use_adr_;  
+  float protocol_version_;
 
    
   sensor_msgs::Imu imu_;
