@@ -1,0 +1,100 @@
+ros-melodic-ublox-serialization (1.4.1-1stretch) stretch; urgency=high
+
+
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Wed, 03 Jun 2020 22:00:00 -0000
+
+ros-melodic-ublox-serialization (1.4.0-1stretch) stretch; urgency=high
+
+  * Bump CMake minimum version to 3.0.2
+  * Contributors: Gonçalo Pereira
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Wed, 27 May 2020 22:00:00 -0000
+
+ros-melodic-ublox-serialization (1.3.1-1stretch) stretch; urgency=high
+
+
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Wed, 11 Mar 2020 23:00:00 -0000
+
+ros-melodic-ublox-serialization (1.3.0-1stretch) stretch; urgency=high
+
+
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Thu, 09 Jan 2020 23:00:00 -0000
+
+ros-melodic-ublox-serialization (1.2.0-1stretch) stretch; urgency=high
+
+
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Mon, 18 Nov 2019 23:00:00 -0000
+
+ros-melodic-ublox-serialization (1.1.2-1stretch) stretch; urgency=high
+
+  * README and package xml updates
+  * Fixed bug with enabling INF messages. Changed how messages which update fix are enabled and changed name of subscribe param namespace to publish.
+  * Added doxygen comments and made minor cleanup changes.
+  * Added doxygen comments
+  * Contributors: Veronica Lane
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Tue, 01 Aug 2017 22:00:00 -0000
+
+ros-melodic-ublox-serialization (1.1.0-1stretch) stretch; urgency=high
+
+  * Updated package xmls with new version number and corrected my email address. Also updated readme to include information about new version plus new parameter
+  * changed name of macro for clarity
+  * changed receive message error print statements to only print in debug mode
+  * Added additional MON messages. Received INF messages are now printed to the ROS console. Also added constants and comments to serialization and a new macro so 1 message can have multiple class, message ID pairs.
+  * Contributors: Veronica Lane
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Sun, 16 Jul 2017 22:00:00 -0000
+
+ros-melodic-ublox-serialization (1.0.0-1stretch) stretch; urgency=high
+
+  * added myself as maintainer to package xmls and updated version numbers of modified packages.
+  * formatting
+  * Formatting of copyright so it's <80 char and changed std::cout in Async worker to ROS_INFO messages
+  * Update CfgGNSS message and serialization which now publishes and receives blocks and reads and configures all GNSS settings at once. Updated MonVER message and serialization, MonVER settings are displayed during initialization, including extension chars. Changed various std::cout messages to ROS_INFO and ROS_ERROR messages.
+  * Contributors: Veronica Lane
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Thu, 22 Jun 2017 22:00:00 -0000
+
+ros-melodic-ublox-serialization (0.0.5-1stretch) stretch; urgency=high
+
+
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Fri, 05 Aug 2016 22:00:00 -0000
+
+ros-melodic-ublox-serialization (0.0.4-1stretch) stretch; urgency=high
+
+  * Add install targets
+  * Contributors: Kartik Mohta
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Sun, 07 Dec 2014 23:00:00 -0000
+
+ros-melodic-ublox-serialization (0.0.3-1stretch) stretch; urgency=high
+
+
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Fri, 17 Oct 2014 22:00:00 -0000
+
+ros-melodic-ublox-serialization (0.0.2-1stretch) stretch; urgency=high
+
+
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Thu, 02 Oct 2014 22:00:00 -0000
+
+ros-melodic-ublox-serialization (0.0.1-1stretch) stretch; urgency=high
+
+
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Thu, 14 Aug 2014 22:00:00 -0000
+
+ros-melodic-ublox-serialization (0.0.0-1stretch) stretch; urgency=high
+
+  * ublox: first commit
+  * Contributors: Chao Qu
+
+ -- Veronica Lane <vmlane@alum.mit.edu>  Sun, 22 Jun 2014 22:00:00 -0000
+
+
