@@ -1,0 +1,12 @@
+Source: ros-noetic-ublox-gps
+Section: misc
+Priority: optional
+Maintainer: Gareth Cross <gcross.code@icloud.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-diagnostic-updater, ros-noetic-roscpp, ros-noetic-roscpp-serialization, ros-noetic-tf, ros-noetic-ublox-msgs, ros-noetic-ublox-serialization
+Homepage: http://ros.org/wiki/ublox
+Standards-Version: 3.9.2
+
+Package: ros-noetic-ublox-gps
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-diagnostic-updater, ros-noetic-roscpp, ros-noetic-roscpp-serialization, ros-noetic-tf, ros-noetic-ublox-msgs, ros-noetic-ublox-serialization
+Description: Driver for u-blox GPS devices.
