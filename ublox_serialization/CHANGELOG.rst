@@ -2,19 +2,20 @@
 Changelog for package ublox_serialization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.4.1 (2020-06-04)
+2.0.0 (2020-10-13)
 ------------------
-
-1.4.0 (2020-05-28)
-------------------
-* Bump CMake minimum version to 3.0.2
-* Contributors: Gonçalo Pereira
-
-1.3.1 (2020-03-12)
-------------------
-
-1.3.0 (2020-01-10)
-------------------
+* Initial ROS 2 port to Dashing
+* Fixes pointed out by clang-tidy.
+* Make sure to initialize checksum properly.
+* Port of ublox_serialization to ROS 2.
+* Start ROS 2 port by COLCON_IGNORE everything.
+* Remove unused vector serialization.
+* Move serialization into the ublox_serialization module.
+* Move the directory structure around just a bit.
+* Remove boost from serialization.
+* Remove trailing whitespace in all files.
+* Rename header files to have .hpp extension.
+* Contributors: Chao Qu, Chris Lalancette
 
 1.2.0 (2019-11-19)
 ------------------
