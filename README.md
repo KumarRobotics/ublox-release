@@ -1,3 +1,30 @@
+## ublox (rolling) - 2.0.0-2
+
+The packages in the `ublox` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --track rolling --rosdistro rolling ublox` on `Tue, 06 Apr 2021 22:41:13 -0000`
+
+These packages were released:
+- `ublox`
+- `ublox_gps`
+- `ublox_msgs`
+- `ublox_serialization`
+
+Version of package(s) in repository `ublox`:
+
+- upstream repository: https://github.com/KumarRobotics/ublox.git
+- release repository: https://github.com/KumarRobotics/ublox-release.git
+- rosdistro version: `2.0.0-1`
+- old version: `2.0.0-1`
+- new version: `2.0.0-2`
+
+Versions of tools used:
+
+- bloom version: `0.10.3`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.20.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## ublox (foxy) - 2.0.0-1
 
 The packages in the `ublox` repository were released into the `foxy` distro by running `/usr/bin/bloom-release --track foxy --rosdistro foxy ublox` on `Tue, 13 Oct 2020 18:51:16 -0000`
