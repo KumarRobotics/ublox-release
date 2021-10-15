@@ -1,1 +1,1 @@
-{"trim": "", "base": "37b4992", "trimbase": "", "parent": "debian/noetic/ublox_gps", "previous": "23a4868"}
+{"base": "3978ec8", "parent": "debian/noetic/ublox_gps", "previous": "30d193c", "trim": "", "trimbase": ""}
