@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<package format="2">
+<package>
   <name>ublox_serialization</name>
-  <version>2.0.0</version>
+  <version>1.5.0</version>
   <description>
 
      ublox_serialization provides header files for serialization of ROS messages to and from u-blox message format.
@@ -12,10 +12,16 @@
   <license>BSD</license>
   <url>http://ros.org/wiki/ublox</url>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <run_depend>roscpp</run_depend>
+
+  <build_depend>roscpp_serialization</build_depend>
+  <run_depend>roscpp_serialization</run_depend>
 
   <export>
-    <build_type>ament_cmake</build_type>
+    <rosdoc external="http://www.u-blox.com/en/product-resources"/>
   </export>
 
 </package>

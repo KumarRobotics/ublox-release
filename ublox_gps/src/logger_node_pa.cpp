@@ -33,9 +33,11 @@
 // measured data with the rtklib.
 
 // ROS includes
-#include <rclcpp/rclcpp.hpp>
+#include <ros/ros.h>
 // Ublox GPS includes
-#include <ublox_gps/raw_data_pa.hpp>
+#include <ublox_gps/raw_data_pa.h>
+
+using namespace ublox_node;
 
 //
 // Raw Data Stream (feature from TUC-ProAut)
@@ -43,15 +45,13 @@
 
 int main(int argc, char** argv) {
 
-  rclcpp::init(argc, argv);
+    ros::init(argc, argv, "ublox_logger");
+    
+    RawDataStreamPa node(true);
+    node.getRosParams();
+    node.initialize();
 
-  auto node = std::make_shared<ublox_node::RawDataStreamPa>(true);
-  node->getRosParams();
-  node->initialize();
+    ros::spin();
 
-  rclcpp::spin(node);
-
-  rclcpp::shutdown();
-
-  return 0;
+    return 0;
 }

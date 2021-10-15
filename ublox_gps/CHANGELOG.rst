@@ -2,117 +2,39 @@
 Changelog for package ublox_gps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.0.0 (2020-10-13)
+1.5.0 (2021-10-15)
 ------------------
-* Initial ROS 2 port to Dashing
-* Create publishers based on ROS parameters (`#1 <https://github.com/KumarRobotics/ublox/issues/1>`_)
-* Make sure to reset for survey-in mode.
-* Make sure to depend on tf2 properly.
-* Make sure to have package.xml depend on ament_cmake_ros
-* Fix getting RTCM ids and rates.
-* Increase the timeout for NavPVT messages during Survey-In config.
-* Configure the base more accurately.
-* Update rover configuration.
-* Create ROS 2 launch files.
-* Finish porting configs to ROS 2.
+* Add rtcm_msgs dependency
+* Add RTK support via rtcm
+* GPS coordinate precision corrected for high accuracy.
+* Diagonstics for Differential GNSS updated.
+* Add a new parameter to set the search path for the param_file_name. Add a default to the node_name parameter.
+* Add zed-f9p configuration
+* Contributors: Balamurugan Kandan, Chris Iverach-Brereton, Igor
+
+1.4.1 (2020-06-04)
+------------------
+* fix signs in sensor_msgs::Imu output
+* Contributors: Raphael Riebl
+
+1.4.0 (2020-05-28)
+------------------
+* Bump CMake minimum version to 3.0.2
+* Move variables from .h to .cpp to solve linking issues
+* added support for protocol version >= 18
+* Contributors: Firat Kasmis, Gonçalo Pereira
+
+1.3.1 (2020-03-12)
+------------------
+* Fix unit in covariance calculation
+* Contributors: Ferry Schoenmakers
+
+1.3.0 (2020-01-10)
+------------------
 * Fix heading output to comply with REP-103
-* Make ublox_gps composable.
-* Fixes pointed out by clang-tidy.
-* Rename rawDataStreamPa member variable to raw_data_stream_pa
-* Fix a bug for reads of zero size.
-* Re-enable logging in the AsyncWorker.
-* Switch a couple more catch blocks to const.
-* Remove -ggdb3 flag from CMakeLists.txt.
-* Fix a few bugs pointed out by valgrind.
-* Pass the logger down to the Gps level.
-* Minor cleanup in the gps code.
-* More fixes for declaring parameters.
-* Declare more parameters.
-* Declare more parameters correctly.
-* More fixes so that we get the correct rates.
-* More fixes around the codebase.
-* Mark constants as such.
-* Remove declareRosBoolean.
-* Update configuration files for ROS 2.
-* Port ublox_gps to ROS 2.
-* Start ROS 2 port by COLCON_IGNORE everything.
-* Split the main out into its own file.
-* Move spinning out of the constructor.
-* Cleanup includes in node.{hpp,cpp}.
-* Move HpPosRecProduct class to its own files.
-* Move HpgRefProduct class to its own files.
-* Move UbloxFirmware9 class to its own files.
-* Move UbloxFirmware8 class to its own files.
-* Move UbloxFirmware7 to its own files.
-* Move UbloxFirmware7Plus class to its own header file.
-* Move UbloxFirmware6 class to its own files.
-* Move UbloxFirmware class to its own files.
-* Move RawDataProduct class into its own files.
-* Move HpgRovProduct class to its own files.
-* Move AdrUdrProduct class into its own files.
-* Move TimProduct class into its own file.
-* Make the node handle a member variable of UbloxNode.
-* Remove the last uses of the global variable.
-* Pass the nodehandle into more methods.
-* Start passing the node into functions.
-* Declare a few more booleans.
-* Declare a lot more parameters.
-* Finish removing the "enable" map.
-* Move some more boolean parameters to declarations.
-* Declare more parameters.
-* Convert a few more parameters over to being declared.
-* Declare the config_on_startup flag.
-* Make dat/set a declared parameter.
-* Make sure to declare the sbas parameter.
-* Add in ROS2-like declare and get parameters.
-* Replace templated publish call with lambdas.
-* Make fix_status_service a member variable of UbloxFirmware.
-* Move fixFromString and modelFromString into node.cpp
-* Make gps a member variable of UbloxNode.
-* Add namespaces to component_interface and fts_product.hpp
-* Minor code improvements.
-* Move FixDiagnostic class to its own file.
-* Move UbloxTopicDiagnostic to its own file.
-* Make gnss a member variable of UbloxNode.
-* Move kNavSvInfoSubscribeRate into the base class that uses it.
-* Remove kSubscribeRate.
-* Move the kDefaultMeasRate to the class that needs it.
-* Remove kROSQueueSize constant.
-* Make rtcms a member variable of UbloxNode.
-* Switch to a structure for RTCMs.
-* Make freq_diag a member variable of UbloxNode.
-* Make updater a member variable of UbloxNode.
-* Make frame_id a member variable.
-* Make config_on_startup_flag a member variable.
-* Make meas_rate a member variable.
-* Make nav_rate a class variable.
-* Lots of small code updates throughout the GPS module.
-* Get rid of global 'debug' variable.
-* Move serialization into the ublox_serialization module.
-* More rearrangement of header files to make a more sane structure.
-* Move FTSProduct class into its own file.
-* UbloxNode is not a component.
-* Move ComponentInterface to its own file.
-* Remove the one static ros::Subscriber.
-* Remove last static advertiser.
-* Switch to const references for std::string where possible.
-* Switch to more idiomatic publisher initialization.
-* Switch the one use of tf to tf2.
-* Remove 'using namespace' uses.
-* Switch to non-boost asio.
-* Remove uses of 'new' throughout the codebase.
-* Remove the last of boost from node.cpp
-* Remove most of boost from node.cpp/.hpp.
-* Remove a bunch of boost from node.cpp
-* Remove more boost.
-* Remove boost from worker.hpp
-* Remove some uses of boost from async_worker.hpp
-* Fully de-boostify callback.hpp
-* Rearrange messages.
-* Switch out boost time and mutex for std
-* Remove trailing whitespace in all files.
-* Rename header files to have .hpp extension.
-* Contributors: Chao Qu, Chris Lalancette, Mabel Zhang
+  When not reporting valid heading, overwrite covariance with big number (0 otherwise)
+* CfgNAV5: add dynamic model bike
+* Contributors: Ferry Schoenmakers, Raphael Riebl
 
 1.2.0 (2019-11-19)
 ------------------
