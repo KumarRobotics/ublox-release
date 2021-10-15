@@ -42,7 +42,7 @@ tracks:
       :{release_inc} --os-name rhel
     devel_branch: master
     last_release: 9a657c103ae2184e0f4c501d467e795ccd1b8f57
-    last_version: 1.4.1
+    last_version: 1.5.0
     name: ublox
     patches: null
     release_inc: '1'
