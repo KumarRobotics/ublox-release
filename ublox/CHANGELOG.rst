@@ -2,24 +2,15 @@
 Changelog for package ublox
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.5.0 (2021-10-15)
+2.1.0 (2022-04-13)
 ------------------
 
-1.4.1 (2020-06-04)
+2.0.0 (2020-10-13)
 ------------------
-
-1.4.0 (2020-05-28)
-------------------
-* Bump CMake minimum version to 3.0.2
-* Contributors: Gonçalo Pereira
-
-1.3.1 (2020-03-12)
-------------------
-* Add metapackage dependencies
-* Contributors: Mateusz Sadowski, Tim Clephas
-
-1.3.0 (2020-01-10)
-------------------
+* Initial ROS 2 port to Dashing
+* Port the ublox package to ROS 2.
+* Start ROS 2 port by COLCON_IGNORE everything.
+* Contributors: Chao Qu, Chris Lalancette
 
 1.2.0 (2019-11-19)
 ------------------
